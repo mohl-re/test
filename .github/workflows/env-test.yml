@@ -2,11 +2,13 @@ name: Test env
 
 on: workflow_dispatch
 
-env:
-  STUFF: test
+
 
 jobs: 
+
   test-job:
     runs-on: ubuntu-latest
+    env:
+      STUFF: test
     steps:
       - run: echo 'my-$STUFF'
