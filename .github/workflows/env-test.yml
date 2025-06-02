@@ -1,0 +1,12 @@
+name: Test env
+
+on: workflow_dispatch
+
+env:
+  STUFF: test
+
+jobs: 
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'my-$STUFF'
